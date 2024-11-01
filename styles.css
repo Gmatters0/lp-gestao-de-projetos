@@ -5,6 +5,7 @@ html{
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    font-size: 10px;
 }
 
 body{
@@ -12,37 +13,50 @@ body{
 }
 
 h1{
-    font-size: 60px;
+    font-size: 5.5rem;
     font-weight: 800;
     margin: 0;
 }
 h2{
-    font-size: 46px;
+    font-size: 4.6rem;
+    font-weight: 800;
+    margin: 0;
+}
+h3{
+    font-size: 3.6rem;
+}
+h4{
+    font-size: 2.4rem;
     font-weight: 800;
     margin: 0;
 }
 p{
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 500;
+    line-height: 30px;
 
 }
 button{
     background-color: #F84646;
     color: #ffff;
-    padding: 8px 24px;
-    border-radius: 8px;
+    padding: .8rem 2.4rem;
+    border-radius: .8rem;
     border: none;
     cursor: pointer;
+    transition: opacity 0.5s ease-in-out, transform 0.5s;
+}
+button:hover{
+    opacity: .9;
+    transform: scale(1.05);
 }
 
 #presentation-container{
-    border: 1px solid black;
-    padding: 40px 100px;
-    height: 600px;
+    padding: 4rem 12rem;
+    height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*background-image: url('./assets/presentation-background.svg');*/
+    background-image: url('./assets/presentation-background.svg');
     background-size: cover;
 }
 
@@ -50,14 +64,424 @@ button{
     width: 50%;
 }
 
-.container{
-    padding: 160px 120px;
-    text-align: center;
+#process-container{
+    padding: 10rem 12rem;
 
-    & button{
-        margin-top: 10px;
-        font-size: 20px;
-        height: 50px;
-        width: 250px;
+    & p{
+        font-size: 2rem;
     }
+}
+
+.grid-container{
+    margin-top: 12rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10rem;
+    & h4{
+        margin-top: 1rem;
+    }
+    & p{
+        margin-top: 1rem;
+        font-size: 1.8rem!important;
+    }
+}
+
+#qualities-container{
+    padding: 10rem 0rem;
+}
+
+#qualities{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-top: 8rem;
+    text-align: left;
+}
+
+.article-container{
+    display: flex;
+    text-align: left;
+}
+
+.article-container > img{
+    width: 80%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.article-container:nth-child(even){
+    margin-top: 10rem;
+    flex-direction: row-reverse;
+}
+
+.article-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 15rem 0 0;
+    & h1{
+        color: #2E2E2E;
+        font-weight: 700;
+    }
+    & p{
+        color: #808080;
+        line-height: 4rem;
+    }
+    & button{
+        font-size: 1.6rem!important;
+        width: 16rem!important;
+    }
+}
+
+.article-container:nth-child(even) > .article-info{
+    margin: 0 0rem 0 15rem;
+}
+
+#companies-container{
+    padding: 10rem 10rem;
+}
+
+.grid-container-companies{
+    display: grid;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.grid-item-companies{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.6rem;
+    height: 9.6rem;
+    width: 17rem;
+    transition: 0.5s;
+
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+
+.company-1{
+    grid-area: 1 / 3;
+}
+.company-2{
+    grid-area: 2 / 2;
+}
+.company-3{
+    grid-area: 2 / 3;
+}
+.company-4{
+    grid-area: 2 / 4;
+}
+.company-5{
+    grid-area: 3 / 1;
+}
+.company-6{
+    grid-area: 3 / 2;
+}
+.company-7{
+    grid-area: 3 / 3;
+}
+.company-8{
+    grid-area: 3 / 4;
+}
+.company-9{
+    grid-area: 3 / 5;
+}
+
+
+.container{
+    padding: 16rem 12rem;
+    text-align: center;
+    & button {
+        margin-top: 1rem;
+        font-size: 2rem;
+        height: 3em;
+        width: 25rem;
+    }
+}
+
+.background-grey{
+    background-color: #F4F5F7;
+}
+.background-red{
+    background-color: #F84646;
+    color: #fff;
+}
+
+footer{
+    background-color: #F84646;
+    padding: 3rem 10rem;
+    color: white;
+}
+
+#footer-lists{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    margin-top: 4rem;
+    padding: 0rem 5rem;
+    font-size: 1.6rem;
+    & ul{
+        padding: 0;
+    }
+    & li{
+        list-style: none;
+        list-style-type: none;
+        margin: 1.6rem;
+        cursor: pointer;
+    }
+}
+
+.footer-list-title{
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    cursor: text!important;
+}
+
+#footer-end{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12rem;
+    & p{
+        font-size: 1.6rem;
+    }
+}
+
+#social-icons{
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+    
+    & img{
+        width: 3.5rem;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px){
+    html{
+        width: 100%;
+        height: 100%;
+        font-size: 9px;
+    }
+    h1{
+        font-size: 5rem;
+        font-weight: 800;
+        margin: 0;
+    }
+    h2{
+        font-size: 4.6rem;
+        font-weight: 800;
+        margin: 0;
+    }
+    h3{
+        font-size: 3.6rem;
+    }
+    h4{
+        font-size: 2.4rem;
+        font-weight: 800;
+        margin: 0;
+    }
+    p{
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 30px;
+    
+    }
+    #presentation{
+        width: 70%;
+    }
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #qualities{
+        gap: 3rem;
+        font-size: 1.6rem;
+    }
+    .article-container > img{
+        width: 40%;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+    .article-info{
+        margin: 0 4rem 0 0;
+        h1{
+            font-size: 5rem;
+        }
+
+    }
+    .article-container:nth-child(even) > .article-info{
+        margin: 0 0 0 4rem;
+    }
+    .container{
+        padding: 16rem 10rem;
+    }   
+   
+    .company-1{
+        grid-area: 1 / 3;
+    }
+    .company-2{
+        grid-area: 2 / 2;
+    }
+    .company-3{
+        grid-area: 2 / 3;
+    }
+    .company-4{
+        grid-area: 2 / 4;
+    }
+    .company-5{
+        grid-area: 1 / 2;
+    }
+    .company-6{
+        grid-area: 3 / 2;
+    }
+    .company-7{
+        grid-area: 3 / 3;
+    }
+    .company-8{
+        grid-area: 3 / 4;
+    }
+    .company-9{
+        grid-area: 1 / 4;
+    }
+
+    #footer-lists{
+        padding: 0;
+        gap: 3rem;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    html{
+        width: 100%;
+        height: 100%;
+        font-size: 7px;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+        font-size: 4.6rem;
+    }
+    h3{
+        font-size: 3.6rem;
+    }
+    h4{
+        font-size: 2.4rem;
+    }
+    p{
+        font-size: 1.5rem;   
+    }
+    button{
+        padding: .8rem 2.4rem;
+    }
+    .grid-container{
+        grid-template-columns: 1fr;
+    }
+    #presentation-container{
+        padding: 4rem 8rem;
+    }
+    #presentation{
+        width: 100%;
+        text-align: center;
+    }
+    #qualities{
+        flex-direction: column;
+        margin-top: 6rem;
+        text-align: center;
+    }
+    #qualities > img{
+        transform: rotate(90deg);
+    }
+    .article-container{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    
+    .article-container:nth-child(even){
+        margin-top: 10rem;
+        flex-direction: column-reverse;
+    }
+    
+    .article-info{
+        align-items: center;
+        text-align: center;
+        margin: 0 0 2rem 0;
+        
+    }
+    
+    .article-container:nth-child(even) > .article-info{
+        margin: 0 0 2rem 0;
+    }
+
+    .article-container > img{
+        width: 100%;
+        object-fit:contain;
+        border-radius: 1rem;
+    }
+    .grid-container-companies{
+        grid-template-columns: 1fr;
+    }
+    .company-1{
+        grid-area: 1 / 1;
+    }
+    .company-2{
+        grid-area: 1 / 2;
+    }
+    .company-3{
+        grid-area: 2 / 1;
+    }
+    .company-4{
+        grid-area: 2 / 2;
+    }
+    .company-5{
+        grid-area: 3 / 1;
+    }
+    .company-6{
+        grid-area: 3 / 2;
+    }
+    .company-7{
+        grid-area: 4 / 1;
+    }
+    .company-8{
+        grid-area: 4 / 2;
+    }
+    .company-9{
+        grid-area: 4 / 2;
+    }
+    footer{
+        padding: 3rem 0rem;
+    }
+    #footer-lists{
+        padding: 0;
+        font-size: 1.4rem;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #footer-end{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2rem;
+        & p{
+            font-size: 1.2rem;
+        }
+    }
+    
+    #social-icons{
+        gap: .8rem;    
+        & img{
+            width: 2.4rem;
+        }
+    }
+    .container{
+        padding: 12rem 8rem;
+
+    } 
 }
